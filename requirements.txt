@@ -1,2 +1,2 @@
-Flask (develpoment)
-gunicorn (production)
+Flask 
+gunicorn
