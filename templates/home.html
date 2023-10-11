@@ -10,15 +10,27 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-    <h1 class="text-center mt-2 mb-2">{{company_name}} CAREERS</h1>
+    {% include 'nav.html' %}
     <img class="img-fluid" id="banner" src="https://tharchen-internship-web--sonamtharchen6.repl.co/static/banner.jpg" height="320">
-    <h2 class="text-center mt-2 mn-2">About Tharchen</h2>
-    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis pariatur eum tenetur modi aut temporibus expedita placeat laborum. Culpa perferendis inventore illo, asperiores numquam voluptas obcaecati deserunt perspiciatis ratione. </p>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-2">{{company_name}} CAREERS
+    </h1>
+    <div class="row" style="margin-bottom:16px">
+      <div class="col-md-6">
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quasi deleniti officia? Voluptatibus ipsa voluptate explicabo soluta mollitia sed animi vel quisquam? Sunt reiciendis ad sapiente nulla enim autem ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis pariatur eum tenetur modi aut temporibus expedita placeat laborum. Culpa perferendis inventore illo, asperiores numquam voluptas obcaecati deserunt perspiciatis ratione.sit amet consectetur adipisicing elit. Est corporis pariatur eum tenetur modi aut temporibus expedita placeat laborum. Culpa perferendis inventore illo, asperiores numquam voluptas obcaecati deserunt perspiciatis ratione. Est corporis pariatur eum tenetur modi aut temporibus expedita placeat laborum. Culpa perferendis inventore illo, asperiores numquam voluptas obcaecati deserunt perspiciatis ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+      <img src="/static/people.jpg" style="height:360px;border-radius:4px;">
+        </div>
+      </div>
+      <br><br>
     <h2 class="text-center mt-2 mb-2">Open Positions</h2> 
       <p>
         {% for job in jobs %}
@@ -27,9 +39,10 @@
       </p>
     <p class="text-center">TODO - Show the jobs here</p>
     <div class="text-center">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
+    <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Questions%20about%20Job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20questions%3A%20%3Center%20questions%20here%3E">Contact Us</a>
       <p class="mt-2">Copyright 2023, Tharchen</p>
       <div>
     </div>
+      {% include 'footer.html' %}
   </body>
 </html>
